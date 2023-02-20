@@ -1,0 +1,13 @@
+<h2>Editar Mascota</h2>
+
+<form action="/api/pets/edit/{{pet.id}}" method="POST">
+<div>
+    <label for="name">Nombre</label>
+    <input type="text" value="{{pet.name}}" id="name" name="name" required="true">
+</div>
+<div>
+    <label for="type">Tipo</label>
+    <input type="text" value="{{pet.type}}" id="type" name="type" required="true">
+</div>
+<button type="submit">Editar</button>
+</form>

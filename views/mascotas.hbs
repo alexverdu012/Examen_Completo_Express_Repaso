@@ -1,0 +1,29 @@
+<h1>LISTA DE MASCOTAS</h1>
+
+<a style="color:rgb(195, 0, 0);" href="/api/auth/logout">Logout</a>
+<ul>
+    {{#each mascotas}}
+    <li>
+        <div>
+            <span>Nombre: {{name}}</span>
+            <span>Tipo: {{type}}</span>
+            <a style="color:red;" href="/api/pets/delete/{{id}}">Eliminar</a>
+            <a style="color:rgb(0, 97, 195);" href="/api/pets/edit/{{id}}">Editar</a>
+        </div>
+    </li>
+    {{/each}}
+</ul>
+
+<h2>Insertar mascota</h2>
+
+<form action="/api/pets" method="POST">
+<div>
+    <label for="name">Nombre</label>
+    <input type="text" id="name" name="name" required="true">
+</div>
+<div>
+    <label for="type">Tipo</label>
+    <input type="text" id="type" name="type" required="true">
+</div>
+<button type="submit">Crear</button>
+</form>
